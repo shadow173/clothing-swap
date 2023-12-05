@@ -6,7 +6,7 @@ import { loaderHelper } from "./helpers/loader";
 import { errorPlugin } from "./plugins/error";
 import { jwtPlugin } from "./plugins/jwt";
 import { zodPlugin } from "./plugins/zod";
-import { prismaLibrary } from "./libraries/prisma";
+import { prisma, prismaLibrary } from "./libraries/prisma";
 
 (async () => {
   // Initialize fastify server
@@ -89,6 +89,7 @@ import { prismaLibrary } from "./libraries/prisma";
   // Initialize libraries
   //await secretsLibrary(["Database", "Internal", "Stripe", "Discord"]);
   await prismaLibrary();
+  await prisma.$connect();
   //await s3Library();
 
   // Start listing for requests
