@@ -10,6 +10,7 @@ export default createRouteHelper({
     // Query session
     const session = await prisma.session.findUnique({
       where: {
+        // @ts-ignore
         token: request.cookies.session || "",
       },
     });
@@ -24,6 +25,7 @@ export default createRouteHelper({
     }
 
     // Remove cookie
+    // @ts-ignore
     reply.clearCookie("session", {
       path: "/",
       domain: domainUtil(),
