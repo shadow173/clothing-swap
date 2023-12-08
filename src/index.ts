@@ -7,6 +7,7 @@ import { errorPlugin } from "./plugins/error";
 import { jwtPlugin } from "./plugins/jwt";
 import { zodPlugin } from "./plugins/zod";
 import { prisma, prismaLibrary } from "./libraries/prisma";
+import fastifyCors from "@fastify/cors";
 
 (async () => {
   // Initialize fastify server
@@ -28,6 +29,9 @@ import { prisma, prismaLibrary } from "./libraries/prisma";
   // });
   server.register(fastifyMulter.contentParser);
   server.register(fastifyCookie);
+  server.register(fastifyCors, {
+    origin: ["https://api.swappable.net", "https://www.swappable.net"],
+  });
   server.register(errorPlugin);
   server.register(jwtPlugin);
   server.register(zodPlugin);
