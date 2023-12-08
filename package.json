@@ -2,7 +2,8 @@
   "name": "clothing-swap",
   "private": true,
   "scripts": {
-    "dev:api": "nodemon --watch src/**/* -e ts,json --exec ts-node --transpile-only src/index.ts"
+    "dev:api": "nodemon --watch src/**/* -e ts,json --exec ts-node --transpile-only src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.468.0",

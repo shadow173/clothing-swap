@@ -6,6 +6,6 @@ COPY yarn.lock yarn.lock
 COPY tsconfig.json tsconfig.json
 
 RUN yarn install
-RUN tsc
+RUN yarn build
 
 CMD [ "node", "dist/index.js" ]
