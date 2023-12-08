@@ -30,7 +30,7 @@ import fastifyCors from "@fastify/cors";
   server.register(fastifyMulter.contentParser);
   server.register(fastifyCookie);
   server.register(fastifyCors, {
-    origin: ["https://api.swappable.net", "https://www.swappable.net"],
+    origin: false,
   });
   server.register(errorPlugin);
   server.register(jwtPlugin);
