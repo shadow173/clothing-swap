@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "dev:api": "nodemon --watch src/**/* -e ts,json --exec ts-node --transpile-only src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prisma:gen": "prisma generate",
+    "prisma:push": "prisma db push"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.468.0",
