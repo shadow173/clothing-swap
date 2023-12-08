@@ -29,9 +29,6 @@ import fastifyCors from "@fastify/cors";
   // });
   server.register(fastifyMulter.contentParser);
   server.register(fastifyCookie);
-  server.register(fastifyCors, {
-    origin: "*",
-  });
   server.register(errorPlugin);
   server.register(jwtPlugin);
   server.register(zodPlugin);
