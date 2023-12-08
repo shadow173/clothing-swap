@@ -4,6 +4,7 @@ COPY /src /src
 COPY /prisma /prisma
 COPY package.json package.json
 COPY yarn.lock yarn.lock
+COPY .env .env
 COPY tsconfig.json tsconfig.json
 
 RUN yarn install
