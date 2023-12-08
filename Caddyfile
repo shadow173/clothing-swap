@@ -1,8 +1,6 @@
-tls {
-	dns cloudflare {env.CF_API_TOKEN}
-	resolvers 1.1.1.1
-}
-
 api.swappable.net {
 	reverse_proxy :3000
+	tls {
+		dns cloudflare {env.CF_API_TOKEN}
+	}
 }
