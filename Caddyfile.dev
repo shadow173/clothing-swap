@@ -1,0 +1,7 @@
+{
+    local_certs
+}
+
+dev.swappable.net {
+    reverse_proxy :3000
+}

@@ -14,7 +14,6 @@ export default createRouteHelper({
     // Query session
     const session = await prisma.session.findUnique({
       where: {
-        // @ts-ignore
         token: request.cookies.session || "",
       },
       include: {
@@ -25,7 +24,6 @@ export default createRouteHelper({
     // Check if session is valid
     if (!session || session.expiresAt < new Date()) {
       // Remove cookie
-      // @ts-ignore
       reply.clearCookie("session", {
         path: "/",
         domain: domainUtil(),

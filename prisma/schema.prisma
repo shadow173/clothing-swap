@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://cswap:cswap@localhost:5432/cswap"
+  url      = env("DATABASE_URL")
 }
 
 generator client {

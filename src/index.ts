@@ -1,6 +1,5 @@
 import fastify, { HTTPMethods, RouteOptions } from "fastify";
-//@ts-ignore
-import fastifyCookie from "fastify-cookie";
+import fastifyCookie from "@fastify/cookie";
 import fastifyMulter from "fastify-multer";
 import { z } from "zod";
 import { loaderHelper } from "./helpers/loader";

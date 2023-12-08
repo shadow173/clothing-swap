@@ -5,7 +5,11 @@ export const domainUtil = (): string => {
 
   switch (environment) {
     case "production":
-      return "clothingswap.com";
+      return "swappable.net";
+    case "staging":
+      return "staging.swappable.net";
+    case "development":
+      return "dev.swappable.net";
     default:
       return "localhost:3000";
   }

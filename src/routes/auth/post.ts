@@ -84,7 +84,6 @@ export default createRouteHelper({
     });
 
     // Set session cookie
-    // @ts-ignore
     reply.setCookie("session", session.token, {
       path: "/",
       expires: session.expiresAt,
